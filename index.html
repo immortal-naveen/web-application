@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classifieds App</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .image-container img {
+            max-width: 100px; /* Thumbnail size */
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(2); 
+            z-index: 10; 
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20,7 +34,9 @@
                 <option value="Credit Card">Credit Card</option>
                 <option value="PayPal">PayPal</option>
                 <option value="Bank Transfer">Bank Transfer</option>
-            </select>
+            </select><br>
+            <label for="image">Product Image:</label>
+            <input type="file" id="image" accept="image/*" required><br>
             <div class="buttons">
                 <button type="submit">Add Listing</button><br>
                 <button type="button" id="resetButton">Reset</button>
@@ -28,7 +44,7 @@
         </form>
 
         <h2>Listings</h2>
-        <ol id="listingList"></l>
+        <ol id="listingList"></ol>
     </div>
 
     <script src="script.js"></script>
