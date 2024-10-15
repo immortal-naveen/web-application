@@ -18,7 +18,7 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
             <button class="delete-button">Delete</button>
         `;
 
-        // Add delete functionality
+      
         listingItem.querySelector('.delete-button').addEventListener('click', function() {
             listingItem.remove();
         });
@@ -26,16 +26,16 @@ document.getElementById('listingForm').addEventListener('submit', function(e) {
         document.getElementById('listingList').appendChild(listingItem);
     }
 
-    // Read the image file
+   
     if (imageFile) {
         reader.readAsDataURL(imageFile);
     }
 
-    // Clear form fields
+    
     document.getElementById('listingForm').reset();
 });
 
-// Reset button functionality
+
 document.getElementById('resetButton').addEventListener('click', function() {
     document.getElementById('listingForm').reset();
 });
